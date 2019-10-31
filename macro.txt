@@ -1,0 +1,10 @@
+run("Brightness/Contrast...");
+run("Enhance Contrast", "saturated=0.35");
+run("Apply LUT");
+titleOrig = getTitle()
+run("Find Maxima...", "prominence=30 strict exclude light output=[Single Points]");
+selectWindow(titleOrig + " Maxima");
+saveAs("Tiff", "/Volumes/LiuHongData/test_output/" + titleOrig);
+//run("Close All");
+
+
